@@ -1,0 +1,52 @@
+hw2
+
+Problem 1
+(a) Unmodified
+(b) README.md would be modified and fun_problem.txt is untracked
+(c) They are both staged
+(d) They are both modified
+(e) README.md would be staged and fun_problem.txt is unmodified
+	The contents of fun_problem.txt would be empty because
+	we used git chechout which discard any changes made to a file.
+(f) README.md would be both staged and modified. This is becuase
+	the last time we staged README.md we did not commit it. So the
+	version of the file remained in the "system". Then we changed
+	README.md so we now we are ahead of the file in staged. There
+	are two versions of the file in the system: one is staged 
+	waiting to be commited, the other is modified and waiting to 
+	be staged.
+
+Problem 3
+1. A list of strings ordered by their index.
+   We could create a vector and push back the items on the
+   menu in order. 
+
+2. A set containing the name of the Star Wars movies (strings)
+   We would use a set that has add function and remove function
+   to add all the Star Wars movies in the set and a contain 
+   function to return all the Movies stored. 
+
+3. 	A map (dictionary) containing structs consisting of an ISBN 
+	(string) and the book name (string). We could use a map that 
+	add an struct item that contains an ISBN and book name each
+	time a new book is added. Then we would have a lookup function
+	that finds the book using the ISBN provided.
+
+4. 	A map containting structs consisting of the year (int) and 
+	the movie name (string). Add a struct each time we add a new
+	movie and have a lookup function that returns all the movies 
+	with the year provided.
+
+5. 	A list containing the name of the episode (string). We could
+	use an array and takes input season number (n) and episode 
+	number (m) and returns the (n*m)th string stored in it.
+
+Problem 4
+1. The resulting linked list would be reverse of the original: 5,4,3,2,1. 
+Explanation: When the linked list 1,2,3,4,5 is taken as input, we use a 
+while loop to get r to equal to the memory address of the last node of the
+ linked list. At this time the next field of r is NULL. Then we execute 
+ funcB which recursively go down the linked list and return the memory 
+ address in the reverse order. So after funcB is executed, we have r 
+ pointing to the first item of the new linked list, and the next node would 
+ be the node containing value 4, etc.

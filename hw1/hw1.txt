@@ -1,0 +1,52 @@
+Weihang Zhang
+weihangz@usc.edu
+Problem 1
+Part (a)
+Answers: 1, 4;
+Part (b)
+Answers: 2,3,4;
+Part (c)
+Answers: 2,3,4,5;
+Part (d)
+Answers: 2;
+Part (e)
+Answers: 2,3,4,5;
+
+Problem 2
+Part (a)
+Answers: 3
+Part (b)
+Answers: 1
+Part (c)
+1. git add hw1q2b.cpp
+2. git log -p -3
+Part (d)
+Answers: 
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+Essentailly, git will tell us to enter an commit message with
+the command or else it will abort the commit.
+
+Part (e)
+Answers: git clone git@github.com:usc-csci104-spring2018/hw-weihangz.git
+
+Problem 4
+1. output:
+1
+2
+3
+4
+5
+Explanation: The function funcB will be called recursively 
+until min = max which in this case is 0. So, it will output the 
+first item in the a array which is 1. Then, the recursion goes up 
+one level and will then execute funcB with min = 1 and max = 1. 
+So 2 gets outputed. This will continue until the last of the 
+function call when min=4 and max=4 is execute and 5 is outputed. 
+Hence the output above.
+
+2. when min>max, funcB will fail to terminate. funcB always terminate 
+for other input values because when min<=max, the base case min==max 
+will always get executed and the recursive calls will end eventually.
+
+3. print out array items from index = min to index = max.

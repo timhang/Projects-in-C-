@@ -1,0 +1,91 @@
+Weihang Zhang
+weihangz@usc.edu
+
+Problem 2
+(a) The running time is Theta(n^2).
+	The i*j loop takes n*(n+1)/2 time. 
+	The i*k loop also takes n*(n+1)/2 time. 
+	So adding together is 
+	n*(n+1) = n^2 + n 
+	so running time grows asymptotically as fast as n^2, 
+	hence Theta(n^2).
+
+(b) Theta(n). 
+	Since for all n <= 0, function returns immediately; 
+	for all n>curr==0, 
+	function calls n times and return n times. 
+	Therefore the running time is Theta(n).
+
+(c) Theta(n). 
+	First, it takes Theta(n) time to populate the queue. 
+	Second step, the function does 1 operation (n/2) times 
+	and 2 operations (n/2) times to get to the form 1,3,5,...,n 
+	which takes Theta(n). 
+	Then, repopulate the queue with n+1 to 2n which is Theta(n). 
+	For the remaining ceil(n/2)+n items, 
+	the function does the same thing as the second step 
+	until the queue is empty which is Theta(n). 
+	So Adding all these together, 
+	this function still grows asymptotically as n, 
+	so function is Theta(n).
+
+(d) Theta(log(n)*n^2). 
+	Assume the worst case that every element in the array arr is 0. 
+	First, the time it takes to populate the linked list is Theta(n). 
+	The traversal statement inside the while loop 
+	triggers a total of n*n times and is therefore Theta(n^2), 
+	the Theta(n) for loop inside the while loop is only triggered 
+	when n is multiples of i. 
+	so it will run n*(n/i) times. 
+	We can do 
+	Sum(i=1 to n (Sum k=0 to n/i of n)) 
+	which is equal to 
+	Sum(i=1 to n (Sum k=0 to n (Sum j=0 to n of (1/i)))).
+	The inner-most summation j=0 to n of (1/i) is bounded by 
+	the integral of 1/i from 0 to n. 
+	If we take its integral it becomes ln(n). 
+	Then, Sum from k=0 to k=n of ln(n) would be n*ln(n). 
+	Then the outer-most summation gives us n^2*ln(n) 
+	which is Theta(log(n)*n^2).
+
+Problem 3
+(a) Worst case run time is Theta(n^2)
+
+(b) Theta(n*log(n)).
+	If somefunc runs n times, 
+	then bar will run log(n) times, 
+	and foo runs n-log(n) times. 
+	n^2 * log(n) is Theta(log(n)*n^2), 
+	(n-log(n))*log(n) = n*log(n)-log^2(n) which is Theta(n*log(n))
+	The amortized run time is 
+	Theta((n*log(n)+n^2 * log(n))/n) 
+	which is equal to Theta(n*log(n)).
+
+(c) Theta(n*log(n)).
+	If somefunc runs n times, bar runs log(n) times and foo runs 
+	n-log(n) times. Run time of the bar part is log(n)*n^2 which is 
+	Theta(n^2*log(n)). Run time of the foo part is (n-log(n))*n*log(n)
+	which is Theta(n^2*log(n)). So amortized run time is 
+	Theta((n^2*log(n)+n^2*log(n))/n) = Theta(n*log(n))
+
+(d) The worst case sequence of calls would be the following:
+	first iteration
+	0 1 log(n) somefunc()
+	1 1 n^2 somefunc()
+	2 2 log(n) anotherfunc()
+	1 2 log(n) anotherfunc()
+	0 2 n^2 anotherfunc()
+	second iteration
+	0 1 log(n) somefunc()
+	1 1 n^2 somefunc()
+	2 2 log(n) anotherfunc()
+	1 2 log(n) anotherfunc()
+	0 2 n^2
+	third iteration
+	0 1 log(n) somefunc()
+	...
+
+	And for (3/5)n of the calls the time is Theta log(n),
+	    for (2/5)n of the calls the time is Theta n^2.
+	So total time is Theta((3/5)n*log(n)+(2/5)n*n^2) = Theta(n^3)
+	So the amortized run time is Theta(n^3/n) = Theta(n^2)

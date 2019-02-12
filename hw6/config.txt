@@ -1,0 +1,10 @@
+# My configuration file
+INDEX_FILE  =     crawler_output.txt
+# Here are some important parameters
+PI=3.14159  #circumference of a circle
+E=2.71828 # Base of the natural logarithm
+# The output file is given below
+QUERY_FILE = query.in
+OUTPUT_FILE = output.out
+RESTART_PROBABILITY = 0.15
+STEP_NUMBER = 2

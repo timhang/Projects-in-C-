@@ -1,0 +1,24 @@
+AND ucla USC IS
+OR usc ucla best is
+AND ucla be3st
+AND arewufhiujkdahka
+AND usc
+OR usc
+AND ucla 23usc
+OR ucla
+OR usc ucla
+AND better
+
+AND best
+PRINT data/webpage1.txt
+OUTGOING data/webpage1.txt
+INCOMING data/webpage2.txt
+asdf
+))
+and
+AND
+OR
+PRINT
+INCOMING
+OUTGOING
+AND sfs*

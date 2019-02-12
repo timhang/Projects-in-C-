@@ -1,0 +1,52 @@
+1
+data/webpage2.txt
+3
+data/webpage1.txt
+data/webpage2.txt
+data/webpage3.txt
+1
+data/webpage1.txt
+1
+data/webpage1.txt
+1
+data/webpage2.txt
+1
+data/webpage2.txt
+1
+data/webpage1.txt
+2
+data/webpage1.txt
+data/webpage2.txt
+2
+data/webpage1.txt
+data/webpage2.txt
+1
+data/webpage2.txt
+Invalid query
+1
+data/webpage3.txt
+data/webpage1.txt
+23usc is the be3st!! 
+ucla is TH-e w[or][sdfa]
+ASDJFNALJKSDFHASDF
+ASASDKJkjhaslkjdfhlkjasdf
+ajksdhfjasdufbaiuvbkadsFasdfasdfaiv iodjfiasdhfiuasd
+arewufhiujkdahka
+[dfas] incoming
+3
+data/webpage2.txt
+eeee.com
+fighton.com
+1
+data/webpage1.txt
+Invalid query
+Invalid query
+Invalid query
+0
+1
+data/webpage1.txt
+0
+1
+data/webpage1.txt
+0
+0

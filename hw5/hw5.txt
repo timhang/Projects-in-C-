@@ -1,0 +1,52 @@
+Weihang Zhang
+weihangz@usc.edu
+
+HW5
+
+Problem 1c
+1. arr[] = {1,0,1,0,1,0,1,0,1,0};
+
+Problem 2
+Since the search for next position formula is 
+pos = lo + [ (x-arr[lo])*(hi-lo) / (arr[hi]-arr[Lo]) ]
+So this algorithm works best when the array being searched
+is uniformly distributed. 
+Consider an array: {1,2,3,4,5,6,7,8,9,10,10000000000}
+if the last element in the array is substantially larger than 
+the rest of the elements in the array, searching the elements from
+position 0 to n-1 would query each entry of the array before
+finding the target.
+
+Problem 3
+Part a
+1. Insertion sort O(n log(n))
+   Linear search O(n)
+   partition O(n)
+
+2. For each recursive call, the input size is 5. and each call to 
+   quantile takes worst case T(5*5), and n/5 calls are made, so total time
+   would just be (n/5) * 5* 5 = T(5*n) = O(n)
+
+3. The array b has size n/5. If n/5 < 10 or n<50, then T = 1. Else if n/5>=10,
+   T (n/5)
+
+4. Assume n>=10. So at least 2 groups of five.
+   We find pivot by finding the medium of each group of five, so in the groups,
+   At least 2 elements are <= medium. Since we have (n/5)/2 groups
+   that contain mediums <= pivot, so n/10 groups at least that are <= to the 
+   middle group. Since each group contain 2 elements <= to group's medium,
+   so counting the medium, 3 in each group are<= medium. so at least 3*n/10 
+   terms are <= the pivot.
+   The same logic applies to the number of terms >= the pivot. (n/10) such 
+   groups and 3 terms in each group are >= the pivot. Thus, 3*n/10 elements 
+   are >= the pivot.
+
+5. So, the biggest size of the array would be n - 3n/10 = 7n/10.
+
+6. So, time to sort the array of mediums is at most T(n/5), and time to sort 
+   the remaining arrays would be at most T(7n/10) drawing from earlier
+   calculations. and it takes O(n) time to find the ideal pivot for the array.
+   (linear search, partition). The base case is when n<10 and takes O(n).
+
+Part b
+1. 
